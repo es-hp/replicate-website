@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="png" href="../assets/notion-favicon.png" />
+    <title>Your connected workspace for wiki, docs & projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../styles/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <!--Body Start-->
+  <body class="text-dark">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Nav Bar-->
+    <nav
+      class="position-sticky top-0 d-flex justify-content-between align-items-center px-4 py-3 bg-white fw-medium text-nowrap z-3"
+      id="global-navbar"
+    >
+      <!--Nav Main Logo-->
+      <a class="p-0" href="index.html"
+        ><img id="nav-logo" src="../assets/Notion-Logo.png"
+      /></a>
+      <!--Nav Center Links: Expanded-->
+      <ul
+        class="navbar-nav d-none d-xl-flex flex-row justify-content-center align-items-center gap-1"
+        id="navbar-links"
+      >
+        <li>
+          <a
+            class="btn nav-link-button"
+            data-bs-toggle="collapse"
+            href="#sub-nav-notion"
+            role="button"
+            id="notion-nav-link"
+          >
+            Notion
+            <i class="bi bi-chevron-down collapse-arrow"></i>
+          </a>
+        </li>
+
+        <li>
+          <a class="btn nav-link-button" href="#">
+            Mail
+            <span class="nav-badge-new">New</span>
+          </a>
+        </li>
+        <li>
+          <a class="btn nav-link-button" href="#">Calendar</a>
+        </li>
+        <li>
+          <a class="btn nav-link-button" href="#">AI</a>
+        </li>
+        <li>
+          <a class="btn nav-link-button" href="#">Enterprise</a>
+        </li>
+        <li>
+          <a class="btn nav-link-button" href="#">Pricing</a>
+        </li>
+        <li>
+          <a class="btn nav-link-button" href="#">Explore</a>
+        </li>
+        <li>
+          <a class="btn nav-link-button" href="#">Request a demo</a>
+        </li>
+      </ul>
+      <!--Nav Buttons-->
+      <div
+        class="d-inline-flex justify-content-end align-items-center w-auto gap-3"
+        id="navbar-buttons"
+      >
+        <a href="#" type="button" class="btn nav-link-button">Log in</a>
+        <a href="#" type="button" class="btn btn-dark">Get Notion free</a>
+
+        <!--Hamburger Menu Toggler-->
+        <button
+          class="navbar-toggler d-xl-none position-relative"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#fullscreen-nav"
+          id="offcanvas-navbar-toggler"
+        >
+          <img
+            class="hamburger-icon position-absolute top-50 start-50"
+            src="../assets/notion-icon-hamburger.svg"
+          />
+          <img
+            class="x-icon position-absolute top-50 start-50"
+            src="../assets/notion-icon-x.svg"
+          />
+        </button>
+
+        <!--Offcanvas Nav for Smaller Screens-->
+        <div
+          class="offcanvas offcanvas-start text-dark bg-white"
+          id="fullscreen-nav"
+          tabindex="-1"
+        >
+          <div
+            class="d-flex flex-column offcanvas-body px-4 pt-3 pb-4 overflow-y-auto fadeHidden slideInHidden"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  href="#oc-nav-collapse-notion"
+                  ><span class="sub-nav-title d-inline">Notion</span>
+                  <i class="bi bi-chevron-down d-inline collapse-arrow"></i
+                ></a>
+                <div
+                  class="collapse mt-2 pt-2 pb-3"
+                  id="oc-nav-collapse-notion"
+                >
+                  <ul class="navbar-nav d-flex flex-column" style="gap: 12px">
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">Notion AI</h3>
+                        <small class="oc-nav-subtitle"
+                          >Build, write, automate</small
+                        >
+                      </a>
+                    </li>
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">Docs</h3>
+                        <small class="oc-nav-subtitle">Simple & powerful</small>
+                      </a>
+                    </li>
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">Wikis</h3>
+                        <small class="oc-nav-subtitle"
+                          >Centralize your knowledge</small
+                        >
+                      </a>
+                    </li>
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">Projects</h3>
+                        <small class="oc-nav-subtitle"
+                          >Manage any project</small
+                        >
+                      </a>
+                    </li>
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">Enterprise Search</h3>
+                        <small class="oc-nav-subtitle"
+                          >Find answers instantly</small
+                        >
+                      </a>
+                    </li>
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">AI Meeting Notes</h3>
+                        <small class="oc-nav-subtitle"
+                          >Perfectly written by AI</small
+                        >
+                      </a>
+                    </li>
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">Forms</h3>
+                        <small class="oc-nav-subtitle"
+                          >Responses and requests</small
+                        >
+                      </a>
+                    </li>
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">Sites</h3>
+                        <small class="oc-nav-subtitle"
+                          >Publish anything, fast</small
+                        >
+                      </a>
+                    </li>
+                  </ul>
+                  <hr style="border-color: #615d59" />
+                  <ul
+                    class="navbar-nav d-flex flex-column oc-nav-dropdown-subgroup"
+                    style="gap: 12px"
+                  >
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">Browse marketplace</h3>
+                        <small class="oc-nav-subtitle"
+                          >Templates for everything</small
+                        >
+                      </a>
+                    </li>
+                    <li class="nav-item d-block">
+                      <a href="" class="nav-link d-block">
+                        <h3 class="oc-nav-title">View integrations</h3>
+                        <small class="oc-nav-subtitle"
+                          >Connect your apps with Notion</small
+                        >
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex gap-2 align-items-center" href="#">
+                  <span class="sub-nav-title d-inline">Mail</span>
+                  <span class="nav-badge-new">New</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="sub-nav-title d-inline">Calendar</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="sub-nav-title d-inline">AI</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="sub-nav-title d-inline">Enterprise</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="sub-nav-title d-inline">Pricing</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  href="#oc-nav-collapse-more"
+                  ><span class="sub-nav-title p-0 m-0 d-inline">More</span>
+                  <i class="bi bi-chevron-down d-inline collapse-arrow"></i
+                ></a>
+                <div class="collapse" id="oc-nav-collapse-more">
+                  <div class="d-flex flex-column gap-2 mt-3">
+                    <h2 class="py-1">Teams</h2>
+                    <ul class="navbar-nav d-flex flex-column" style="gap: 12px">
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Eng & Product</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Design</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Marketing</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">IT</h3>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="d-flex flex-column gap-2 mt-3">
+                    <h2 class="py-1">Team size</h2>
+                    <ul class="navbar-nav d-flex flex-column" style="gap: 12px">
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Startups</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">SMBs</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Enterprise</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Education</h3>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="d-flex flex-column gap-2 mt-3 oc-nav-dropdown-subgroup"
+                  >
+                    <h2 class="py-1">Learn</h2>
+                    <ul class="navbar-nav d-flex flex-column" style="gap: 12px">
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Help center</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Customer stories</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Blog</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Community</h3>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="d-flex flex-column gap-2 mt-3 oc-nav-dropdown-subgroup"
+                  >
+                    <h2 class="py-1">Build</h2>
+                    <ul class="navbar-nav d-flex flex-column" style="gap: 12px">
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">API</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Templates</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Security</h3>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="nav-link">
+                          <h3 class="oc-nav-title">Consultants</h3>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="d-flex gap-4 p-3 border-top fadeHidden"
+            style="height: 68px; border-color: #0000001a"
+          >
+            <a
+              href=""
+              type="button"
+              class="btn btn-primary text-white fs-6 fw-medium shadow-custom"
+              style="flex: 1; min-height: 36px"
+              >Download app</a
+            >
+            <a
+              href=""
+              type="button"
+              class="btn btn-light fs-6 shadow-custom border"
+              style="flex: 1; border-color: #0000001a; min-height: 36px"
+              >Log in</a
+            >
+          </div>
+        </div>
+      </div>
+      <!--Subnav Dropdown Start-->
+      <div
+        class="collapse position-absolute start-0 vw-100 z-2 shadow-sm bg-white"
+        id="sub-nav-notion"
+        style="top: 72px"
+      >
+        <div class="d-grid" id="sub-nav-notion-grid">
+          <div id="sub-nav-col-1">
+            <h2 class="text-secondary ps-2">Features</h2>
+            <div class="d-flex flex-column mt-3">
+              <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+                <h3 class="sub-nav-title p-0 m-0">Notion AI</h3>
+                <small class="sub-nav-subtitle text-decoration-none"
+                  >Build, write, automate</small
+                >
+              </a>
+              <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+                <h3 class="sub-nav-title p-0 m-0">Docs</h3>
+                <small class="sub-nav-subtitle text-decoration-none"
+                  >Simple & Powerful</small
+                >
+              </a>
+              <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+                <h3 class="sub-nav-title p-0 m-0">Wikis</h3>
+                <small class="sub-nav-subtitle text-decoration-none"
+                  >Centralize your knowledge</small
+                >
+              </a>
+              <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+                <h3 class="sub-nav-title p-0 m-0">Projects</h3>
+                <small class="sub-nav-subtitle text-decoration-none"
+                  >Manage any project</small
+                >
+              </a>
+            </div>
+          </div>
+          <div id="sub-nav-col-2" style="padding-top: 35px">
+            <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+              <div class="d-block">
+                <h3 class="sub-nav-title p-0 m-0 d-inline align-middle">
+                  Enterprise Search
+                </h3>
+                <span class="nav-badge-new">New</span>
+              </div>
+              <small class="sub-nav-subtitle">Find answers instantly</small>
+            </a>
+            <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+              <div class="d-block">
+                <h3 class="sub-nav-title p-0 m-0 d-inline align-middle">
+                  AI Meeting Notes
+                </h3>
+                <span class="nav-badge-new">New</span>
+              </div>
+              <small class="sub-nav-subtitle"> Perfectly written by AI </small>
+            </a>
+            <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+              <h3 class="sub-nav-title p-0 m-0">Forms</h3>
+              <small class="sub-nav-subtitle">Responses and requests</small>
+            </a>
+            <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+              <h3 class="sub-nav-title p-0 m-0">Sites</h3>
+              <small class="sub-nav-subtitle">Publish anything, fast</small>
+            </a>
+          </div>
+          <div id="sub-nav-col-3">
+            <h2 class="text-secondary ps-2" style="grid-column-start: 3">
+              Get Started
+            </h2>
+            <div class="d-flex flex-column mt-3">
+              <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+                <h3 class="sub-nav-title p-0 m-0">Browse marketplace</h3>
+                <small class="sub-nav-subtitle">Template for everything</small>
+              </a>
+              <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+                <h3 class="sub-nav-title p-0 m-0">View integrations</h3>
+                <small class="sub-nav-subtitle"
+                  >Connect your apps with Notion</small
+                >
+              </a>
+              <a class="d-block rounded-2 p-2 sub-nav-link" href="#">
+                <h3 class="sub-nav-title p-0 m-0">Download web clipper</h3>
+                <small class="sub-nav-subtitle"
+                  >Save from the web into Notion</small
+                >
+              </a>
+            </div>
+          </div>
+          <div id="sub-nav-col-4">
+            <div
+              class="d-flex flex-column h-100 w-100 rounded-2 bg-light"
+              id="sub-nav-cta-box"
+            >
+              <span>Try the Notion desktop app for a faster experience</span>
+              <a
+                type="button"
+                class="btn btn-primary text-white shadow-sm fs-6 fw-normal"
+                id="btn-download-app"
+                href="#"
+                >Download app</a
+              >
+              <img src="../assets/home/startups_background.avif" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Subnav Dropdown End-->
+    </nav>
+    <main>
+      <!--Home Hero-->
+      <div id="home">
+        <div id="heroAndBento" class="d-flex flex-column">
+          <section id="home-hero" class="d-flex gap-4">
+            <header
+              class="d-flex flex-column gap-3 justify-content-center"
+              id="homepage-header"
+            >
+              <h1>The AI workspace that works for you.</h1>
+              <h2>
+                One place where teams find every answer, automate the busywork,
+                and get projects done.
+              </h2>
+              <nav class="d-flex gap-2">
+                <a
+                  href="#"
+                  class="btn btn-primary btn-lg text-white"
+                  type="button"
+                  >Get Notion free</a
+                ><a href="#" class="btn btn-tertiary btn-lg" type="button"
+                  >Request a demo</a
+                >
+              </nav>
+            </header>
+            <div
+              id="homepage-media"
+              class="d-flex flex-column align-items-center justify-content-center"
+            >
+              <img src="../assets/home/hero-media.png" alt="" />
+            </div>
+          </section>
+          <!--Logo Wall-->
+          <section>
+            <div
+              id="logo-wall"
+              class="d-flex flex-column justify-content-between flex-lg-row w-100 align-items-center"
+              style="row-gap: 1rem; column-gap: 3rem"
+            >
+              <small
+                class="text-secondary fw-light text-center text-lg-start text-nowrap"
+                style="width: 175px"
+                >Trusted by top teams</small
+              >
+              <div
+                id="logos"
+                class="d-flex flex-wrap justify-content-center justify-content-md-between align-items-center gap-3 w-100"
+              >
+                <div class="logo-wall-logo">
+                  <img
+                    src="../assets/home/logo-wall/OpenAI-black-wordmark-cropped.avif"
+                  />
+                </div>
+                <div class="logo-wall-logo">
+                  <img src="../assets/home/logo-wall/Figma-logo-color.svg" />
+                </div>
+                <div class="logo-wall-logo">
+                  <img src="../assets/home/logo-wall/volvo.avif" />
+                </div>
+                <div class="logo-wall-logo">
+                  <img src="../assets/home/logo-wall/ramp.avif" />
+                </div>
+                <div class="logo-wall-logo">
+                  <img src="../assets/home/logo-wall/cursor.avif" />
+                </div>
+                <div class="logo-wall-logo">
+                  <img
+                    src="../assets/home/logo-wall/Headspace-logo-color.svg"
+                  />
+                </div>
+                <div class="logo-wall-logo">
+                  <img
+                    src="../assets/home/logo-wall/Perplexity_AI_logo.svg.png"
+                  />
+                </div>
+                <div class="logo-wall-logo">
+                  <img
+                    src="../assets/home/logo-wall/vercel-logotype-light.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--Card Grid (Bento)-->
+          <section>
+            <div class="" id="home-bento">
+              <div class="row">
+                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                  <article
+                    id="card-ai-meeting-notes"
+                    class="card rounded-4 bg-danger-subtle shadow-sm border-0 w-100"
+                    alt="try it"
+                  >
+                    <a href="#">
+                      <div class="card-body p-0">
+                        <header class="d-flex flex-column gap-1">
+                          <div
+                            class="card-title d-flex gap-2 align-items-center"
+                          >
+                            <i
+                              class="bi bi-mic-fill text-danger text-center bg-white rounded-1 square-icon"
+                            ></i>
+                            <h3>AI Meeting Notes</h3>
+                          </div>
+                          <div
+                            class="card-subtitle d-flex justify-content-between"
+                          >
+                            <h2>Perfect notes every time.</h2>
+                            <i
+                              class="bi bi-arrow-right bg-white rounded-circle text-secondary circle-icon"
+                            ></i>
+                          </div>
+                        </header>
+                        <img
+                          class="card-img-bottom m-0 p-0"
+                          src="https://images.ctfassets.net/spoqsaf9291f/4zmmc2Sts2j750iWG4cz9C/f9fc4a58dea5be6e42777a8637684765/bento_1.en-US.png"
+                          alt="ai meeting notes"
+                        />
+                      </div>
+                    </a>
+                  </article>
+                </div>
+                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                  <article
+                    id="card-enterprise"
+                    class="card rounded-4 bg-primary-subtle shadow-sm border-0 w-100"
+                    alt="try it"
+                  >
+                    <a href="#">
+                      <div class="card-body p-0">
+                        <header class="d-flex flex-column gap-1">
+                          <div
+                            class="card-title d-flex gap-2 align-items-center"
+                          >
+                            <i
+                              class="bi bi-search text-primary text-center bg-white rounded-1 square-icon"
+                            ></i>
+                            <h3>Enterprise Search</h3>
+                          </div>
+                          <div
+                            class="card-subtitle d-flex justify-content-between"
+                          >
+                            <h2>One search for everything.</h2>
+                            <i
+                              class="bi bi-arrow-right bg-white rounded-circle text-secondary circle-icon"
+                            ></i>
+                          </div>
+                        </header>
+                        <img
+                          class="card-img-bottom m-0 p-0"
+                          src="https://images.ctfassets.net/spoqsaf9291f/2ZvcfZ5FYoh5mWSzqBAoqI/0fc610cde8307c2707c679304bf55589/30222"
+                          alt="enterprise"
+                        />
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-12">
+                  <article
+                    id="card-projects"
+                    class="card rounded-4 bg-warning-subtle shadow-sm border-0 w-100"
+                    alt="try it"
+                  >
+                    <a href="#">
+                      <div
+                        class="card-body d-flex flex-column flex-lg-row justify-content-between p-0"
+                      >
+                        <header
+                          class="d-flex flex-column gap-1"
+                          style="min-width: 12rem"
+                        >
+                          <div
+                            class="card-title d-flex gap-2 align-items-center"
+                          >
+                            <i
+                              class="bi bi-bullseye text-warning text-center bg-white rounded-1 square-icon"
+                            ></i>
+                            <h3>Projects</h3>
+                          </div>
+                          <div
+                            class="card-subtitle d-flex flex-row flex-lg-column gap-2 justify-content-between"
+                            style="flex: 1"
+                          >
+                            <h2>Keep every plan on track.</h2>
+                            <i
+                              class="bi bi-arrow-right bg-white rounded-circle text-secondary circle-icon"
+                            ></i>
+                          </div>
+                        </header>
+                        <img
+                          class="card-img-bottom m-0 p-0 mt-4 w-auto"
+                          src="../assets/home/bento_img-3.png"
+                          alt="projects"
+                        />
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-6 mt-4">
+                  <article
+                    id="card-notion-mail"
+                    class="card rounded-4 bg-light shadow-sm border-0 w-100"
+                    alt="try it"
+                  >
+                    <a href="#">
+                      <div class="card-body p-0">
+                        <header class="d-flex flex-column gap-1">
+                          <div
+                            class="card-title d-flex gap-2 align-items-center"
+                          >
+                            <i
+                              class="bi bi-mic-fill text-dark text-center bg-white rounded-1 square-icon"
+                            ></i>
+                            <h3>Notion Mail</h3>
+                          </div>
+                          <div
+                            class="card-subtitle d-flex justify-content-between"
+                          >
+                            <h2>The inbox that thinks like you.</h2>
+                            <i
+                              class="bi bi-arrow-right bg-white rounded-circle text-secondary circle-icon"
+                            ></i>
+                          </div>
+                        </header>
+                        <img
+                          class="card-img-bottom m-0 p-0"
+                          src="../assets/home/bento_img-4.png"
+                          alt="ai meeting notes"
+                        />
+                      </div>
+                    </a>
+                  </article>
+                </div>
+                <div class="col-12 col-lg-6 mt-4">
+                  <article
+                    id="card-business-box"
+                    class="card rounded-4 bg-success-subtle shadow-sm border-0 w-100"
+                    alt="try it"
+                  >
+                    <a href="#">
+                      <div class="card-body p-0">
+                        <header class="d-flex flex-column gap-1">
+                          <div
+                            class="card-title d-flex gap-2 align-items-center"
+                          >
+                            <i
+                              class="bi bi-search text-success text-center bg-white rounded-1 square-icon"
+                            ></i>
+                            <h3>Business-in-a-box</h3>
+                          </div>
+                          <div
+                            class="card-subtitle d-flex justify-content-between"
+                          >
+                            <h2>Run your entire company.</h2>
+                            <i
+                              class="bi bi-arrow-right bg-white rounded-circle text-secondary circle-icon"
+                            ></i>
+                          </div>
+                        </header>
+                        <img
+                          class="card-img-bottom m-0 p-0"
+                          src="../assets/home/bento_img-5.png"
+                          alt="enterprise"
+                        />
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section
+            id="home-quote"
+            class="container-fluid d-flex flex-column gap-2 align-items-center justify-content-center text-center"
+            style="padding: 4rem"
+          >
+            <figure>
+              <blockquote>
+                <p class="">"Your AI everything app."</p>
+              </blockquote>
+              <figcaption>
+                <img
+                  src="../assets/home/forbes-logo.png"
+                  alt="forbes"
+                  style="width: 80px"
+                />
+              </figcaption>
+            </figure>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer class="text-dark bg-white w-100">
+      <hr class="mx-4" />
+      <div id="footer-content" class="d-flex gap-4">
+        <div
+          id="footer-info"
+          class="d-flex flex-column justify-content-stretch"
+        >
+          <div class="d-flex flex-column gap-3">
+            <div class="footer-logo d-flex gap-2">
+              <img
+                src="../assets/notion-logo.png"
+                alt="notion"
+                style="width: 37.32px"
+              />
+              <p>Notion</p>
+            </div>
+            <div
+              id="footer-socials"
+              class="d-flex justify-content-start align-items-center gap-2 mt-3"
+            >
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-end gap-3 mt-4 h-100">
+            <div class="dropup" style="margin-top: 2.25rem">
+              <button
+                id="site-language"
+                type="button"
+                class="btn btn-outline-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                English
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">French</a></li>
+                <li>
+                  <a class="dropdown-item" href="#"> Japanese </a>
+                </li>
+              </ul>
+            </div>
+            <div id="settings-links">
+              <a href=""><small>Do Not Sell or Share My Info</small></a>
+              <br />
+              <a href="#"><small>Cookie settings</small></a>
+            </div>
+            <small id="copyright">&copy; 2025 Notion Labs, Inc.</small>
+          </div>
+        </div>
+        <div id="footer-links" class="d-grid">
+          <ul class="navbar-nav footer-column-list">
+            <p class="fw-semibold">Company</p>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Security</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Status</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Terms & privacy</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav footer-column-list">
+            <p class="fw-semibold">Download</p>
+            <li class="nav-item">
+              <a href="#" class="nav-link">iOS & Android</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Mac & Windows</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Web Clipper</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav footer-column-list">
+            <p class="fw-semibold">Resources</p>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Help center</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Community</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Integrations</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Templates</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Affiliates</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav footer-column-list">
+            <p class="fw-semibold">Notion for</p>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Enterprise</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Small business</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Personal</a>
+            </li>
+            <li id="footer-link-explore-more" class="mt-auto">
+              <a href="">Explore more <i class="bi bi-arrow-right"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

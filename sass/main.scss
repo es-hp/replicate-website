@@ -1,0 +1,27 @@
+//custom variables
+$dark: #191918;
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif,
+  "Segoe UI Emoji", "Segoe UI Symbol";
+
+$btn-font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif,
+  "Segoe UI Emoji", "Segoe UI Symbol";
+$btn-font-size: 0.9375rem;
+$btn-font-weight: 500;
+$btn-padding-x: 14px;
+$btn-padding-y: 4px;
+
+$blue: #2383e2;
+$gray-600: #615d59;
+$gray-900: #191918;
+
+$offcanvas-horizontal-width: 100vw;
+
+// $nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2;
+
+$nav-link-padding-y: 0.25rem;
+
+//import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
