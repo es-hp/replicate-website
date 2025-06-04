@@ -1,0 +1,73 @@
+:root {
+  --color-hover-gray: rgba(55, 53, 47, 0.06);
+  --color-dark-gray: rgb(115, 114, 110);
+  --color-darker-gray: rgba(70, 68, 64, 0.45);
+}
+
+.bg-hover-gray {
+  background-color: var(--color-hover-gray);
+}
+
+.text-dark-gray {
+  color: var(--color-darker-gray);
+}
+
+.text-input-label {
+  color: var(--color-dark-gray);
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+#nav-lang-dropdown-btn:hover {
+  background-color: var(--color-hover-gray);
+}
+
+.third-party-authentication-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  width: 100%;
+  height: 36px;
+  border-radius: 6px;
+  color: rgb(50, 48, 44);
+  fill: rgb(50, 48, 44);
+  background: none;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 12px;
+  font-weight: 500;
+  border: 1px solid rgba(84, 72, 9, 0.15);
+  box-shadow: none;
+  margin-top: 8px;
+  transition: background 20ms ease-in;
+  cursor: pointer;
+}
+
+.third-party-authentication-button:hover {
+  background-color: var(--color-hover-gray);
+}
+
+.third-party-logo {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  flex-shrink: 0;
+  position: absolute;
+  left: 10px;
+}
+
+#login-btn-continue:hover {
+  background-color: rgb(0 119 212);
+}
+
+#login-btn-resend-code:hover {
+  background-color: rgba(35, 131, 226, 0.07);
+}

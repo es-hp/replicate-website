@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="png" href="../assets/notion-favicon.png" />
+    <title>Notion - Log in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <!--Body Start-->
+  <body class="text-dark">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Nav Bar-->
+    <nav
+      class="position-sticky top-0 d-flex justify-content-start align-items-center px-4 py-3 bg-white fw-medium text-nowrap z-3"
+      id="login-navbar"
+    >
+      <!--Nav Main Logo-->
+      <a class="p-0" href="index.html"
+        ><img id="nav-logo" src="../assets/Notion-Logo.png"
+      /></a>
+      <div
+        class="d-flex align-items-center justify-content-center ms-2"
+        style="width: 0.5rem; height: 1.25rem; flex: 0 0 auto"
+      >
+        <div
+          role="separator"
+          style="
+            width: 1px;
+            height: 100%;
+            border-right: 2px solid rgba(84, 72, 49, 0.15);
+          "
+        ></div>
+      </div>
+      <div class="dropdown" id="nav-lang-dropdown" style="margin-left: 8px">
+        <div
+          class="dropdown-toggle btn btn-sm ps-2 d-flex align-items-center text-nowrap fs-14"
+          type="button"
+          data-bs-toggle="dropdown"
+          id="nav-lang-dropdown-btn"
+          style="
+            color: rgba(71, 70, 68, 0.6);
+            transition: background 20ms ease-in;
+            cursor: pointer;
+            height: 28px;
+            padding-right: 8px;
+            padding-left: 8px;
+            border-radius: 6px;
+
+            flex-shrink: 0;
+            line-height: 1.2;
+            min-width: 0;
+            margin-left: -8px;
+          "
+        >
+          <i class="bi bi-globe me-2"></i> English
+        </div>
+        <ul class="dropdown-menu">
+          <li class="p-2 dropdown-item">
+            <a href="" class="">English</a>
+          </li>
+          <li class="p-2 dropdown-item">
+            <a href="" class="">French</a>
+          </li>
+          <li class="p-2 dropdown-item">
+            <a href="" class="">Japanese</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Main Body-->
+    <main>
+      <section
+        class="w-100 my-0 mx-auto overflow-visible"
+        style="padding: 0 40px"
+      >
+        <div class="w-100 my-0 mx-auto">
+          <div class="d-flex flex-column align-items-center">
+            <div
+              class="d-flex flex-column text-start w-100"
+              style="
+                max-width: 23.75rem;
+                margin-top: 10vh;
+                margin-bottom: 1.5rem;
+              "
+            >
+              <h1 class="fs-4">Think it. Make it.</h1>
+              <h2 class="fs-4 text-dark-gray">Log in to your Notion account</h2>
+            </div>
+            <!--Third Party Login Buttons-->
+            <div
+              class="d-flex flex-column align-items-center w-100"
+              id="notion-login"
+              style="max-width: 20rem; margin-bottom: 4vh"
+            >
+              <div class="d-flex flex-column w-100">
+                <div id="third-party-authentication-group">
+                  <div role="button" class="third-party-authentication-button">
+                    <div
+                      class="d-flex text-center justify-content-center align-items-center"
+                    >
+                      <img
+                        src="../assets/login/Google__G__logo.svg"
+                        alt="googleLogo"
+                        class="third-party-logo"
+                      />
+                      <div>Continue with Google</div>
+                    </div>
+                  </div>
+                  <div role="button" class="third-party-authentication-button">
+                    <div
+                      class="d-flex text-center justify-content-center align-items-center"
+                    >
+                      <img
+                        src="../assets/login/Apple_logo_black.svg"
+                        alt="googleLogo"
+                        class="third-party-logo"
+                      />
+                      <div>Continue with Apple</div>
+                    </div>
+                  </div>
+                  <div role="button" class="third-party-authentication-button">
+                    <div
+                      class="d-flex text-center justify-content-center align-items-center"
+                    >
+                      <img
+                        src="../assets/login/Microsoft_logo.svg"
+                        alt="googleLogo"
+                        class="third-party-logo"
+                      />
+                      <div>Continue with Microsoft</div>
+                    </div>
+                  </div>
+                  <div role="button" class="third-party-authentication-button">
+                    <div
+                      class="d-flex text-center justify-content-center align-items-center"
+                    >
+                      <img
+                        src="../assets/login/passkey_logo.svg"
+                        alt="googleLogo"
+                        class="third-party-logo"
+                      />
+                      <div>Log in with passkey</div>
+                    </div>
+                  </div>
+                  <div role="button" class="third-party-authentication-button">
+                    <div
+                      class="d-flex text-center justify-content-center align-items-center"
+                    >
+                      <img
+                        src="../assets/login/building-1062.svg"
+                        alt="googleLogo"
+                        class="third-party-logo"
+                      />
+                      <div>Single sign-on (SSO)</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="login-form">
+                  <div
+                    id="login-divider-container"
+                    class="d-flex align-items-center justify-content-center w-100"
+                    style="height: 41px; flex: 0 0 auto"
+                  >
+                    <div
+                      role="separator"
+                      class="w-100"
+                      style="
+                        height: 1px;
+                        border-bottom: 1px solid rgba(84, 72, 49, 0.08);
+                      "
+                    ></div>
+                  </div>
+                  <!--Email Login Form-->
+                  <form
+                    class="needs-validation"
+                    id="login-form"
+                    action="/submit"
+                    method="POST"
+                    novalidate
+                  >
+                    <label
+                      for="notion-email-input-1"
+                      class="form-label d-block mb-1 fw-medium text-input-label fs-12"
+                      >Email</label
+                    >
+                    <input
+                      id="notion-email-input-1"
+                      type="email"
+                      placeholder="Enter your email address..."
+                      class="form-control d-flex align-items-center w-100 fs-6 position-relative bg-transparent mt-1 mb-2"
+                      style="
+                        resize: none;
+                        color: rgb(4, 4, 4);
+                        border-radius: 6px;
+                        box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px;
+                        cursor: text;
+                        padding: 4px 10px;
+                      "
+                      autocomplete="username"
+                      required
+                    />
+                    <div
+                      id="emailHelp"
+                      class="form-text d-flex text-start text-dark-gray fs-12"
+                      style="
+                        margin-bottom: 18px;
+                        margin-top: 6px;
+                        line-height: 1rem;
+                      "
+                    >
+                      Use an organization email to easily collaborate with
+                      teammates
+                    </div>
+                    <label
+                      for="notion-verification-input-3"
+                      class="form-label d-block mb-1 fw-medium text-input-label fs-12"
+                      >Verification code</label
+                    >
+                    <input
+                      id="notion-verification-input-3"
+                      type="text"
+                      placeholder="Enter code"
+                      class="form-control d-flex align-items-center w-100 fs-6 position-relative bg-transparent mt-1 mb-2"
+                      style="
+                        resize: none;
+                        color: rgb(4, 4, 4);
+                        border-radius: 6px;
+                        box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px;
+                        cursor: text;
+                        padding: 4px 10px;
+                      "
+                      autocomplete="one-time-code"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      spellcheck="false"
+                      required
+                    />
+                    <div
+                      id="verificationCodeHelp"
+                      class="form-text d-flex text-start text-dark-gray fs-12"
+                      style="
+                        margin-bottom: 18px;
+                        margin-top: 6px;
+                        line-height: 1rem;
+                      "
+                    >
+                      We sent a code to your inbox
+                    </div>
+                    <button
+                      type="submit"
+                      role="button"
+                      class="btn btn-primary d-inline-grid align-items-center justify-content-center text-nowrap text-white w-100 fw-normal fs-14"
+                      style="
+                        transition: background 20ms ease-in;
+                        height: 2.25rem;
+                        border-radius: 0.25rem;
+
+                        line-height: 1;
+                        padding: 0 12px;
+                        margin-top: 6px;
+                        margin-bottom: 12px;
+                      "
+                      id="login-btn-continue"
+                    >
+                      <div
+                        class="d-flex align-items-center text-center justify-content-center"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                    <div
+                      role="button"
+                      class="btn d-block align-items-center text-center text-primary fw-light fs-14"
+                      style="
+                        transition: background 20ms ease-in;
+                        cursor: pointer;
+                        height: 28px;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        padding-top: 6px;
+                        border-radius: 6px;
+                        flex-shrink: 0;
+                        line-height: 1.2;
+                        min-width: 0;
+                      "
+                      id="login-btn-resend-code"
+                    >
+                      Resend verification code
+                    </div>
+                    <div
+                      class="invalid-feedback"
+                      role="alert"
+                      class="text-center d-block w-100 fw-light fs-14"
+                      style="color: rgb(235, 87, 87); margin: 12px 0px"
+                    >
+                      Your login code was incorrect. Please try again.
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div
+                class="w-100 mt-2 mb-0 lh-bases text-center fs-12"
+                style="color: rgb(115, 114, 110); text-wrap: balance"
+              >
+                <p>
+                  By continuing, you acknowledge that you understand and agree
+                  to the
+                  <a href="" class="text-decoration-underline text-dark-gray"
+                    >Terms & Conditions</a
+                  >
+                  and
+                  <a href="" class="text-decoration-underline text-dark-gray"
+                    >Privacy Policy</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../scripts/form-validation.js"></script>
+  </body>
+</html>
