@@ -8,15 +8,15 @@ Recreation of parts of the Notion homepage, and login page.
 
 ## index.html
 
-### <nav>
+### 'nav'
 - Responsive navigation bar that collapses links at <1200px viewport width and instead shows hamburger menu that links to offcanvas (bootstrap) menu for smaller screens.
   - Top nav bar is fixed to the top of screen and when page content is scrolled, box-shadow is applied to the nav bar (Javascript - main.js).
 
-#### <nav> Sub-nav using Collapse (bootstrap)
+#### 'nav' Sub-nav using Collapse (bootstrap)
 - Full navigation bar has a dropdown (bootstrap - collapse) sub-nav menu that opens on mouse enter (on link and while on subnav) and closes on mouse exit with delay (Javascript - main.js).
   - While sub-nav is open the arrow icon next to link changes to arrow pointing up and otherwise points down (Javascript - main.js).
  
-#### <nav> Offcanvas (bootstrap)
+#### 'nav' Offcanvas (bootstrap)
 - The hamburger menu icon changes to x-icon while offcanvas menu is open (Javascript - main.js).
 - Offcanvas nav closes automatically when viewport is resized to >= 1200 (Javascript - main.js).
 - Collapsable links ("Notion" and "More"), when open, will gray out other links (Javascript - main.js).
@@ -28,8 +28,8 @@ Recreation of parts of the Notion homepage, and login page.
 - Product descriptions made using bootstrap's card classes and row/column structure to create a responsive grid.
 
 ### Customer Stories Section 
-- Tried to fit in the use of the <table> element to structure customer testimonials.
-  - I only used <table> here to meet assignment requirements. It would have been better to use grid or flexboxes for this content.
+- Tried to fit in the use of the 'table' element to structure customer testimonials.
+  - I only used 'table' here to meet assignment requirements. It would have been better to use grid or flexboxes for this content.
 
 ### <footer>
 - Uses bootstrap classes to create a responsive footer.
