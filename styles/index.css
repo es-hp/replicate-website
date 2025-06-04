@@ -26,6 +26,10 @@
   --color-border: #0000001a;
 }
 
+.font-serif {
+  font-family: var(--font-family-serif);
+}
+
 #heroAndBento {
   gap: 2rem;
 }
@@ -214,4 +218,58 @@ blockquote p {
   blockquote p {
     font-size: var(--font-size-700);
   }
+}
+
+blockquote p::before {
+  content: open-quote;
+}
+
+blockquote p::after {
+  content: close-quote;
+}
+
+figcaption a:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+#socialProof-container {
+  position: relative;
+  background: none;
+  align-self: center;
+  border: none;
+  border-radius: 0.75rem;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+#socialProof-container:hover {
+  opacity: 0.9;
+}
+
+.customer-stories-logo {
+  max-height: 24px;
+  width: auto;
+  object-fit: contain;
+  object-position: left;
+  margin-bottom: 1rem;
+}
+
+.customer-stories-table td {
+  vertical-align: top;
+}
+
+.customer-stories-table a {
+  padding-bottom: 24px;
+}
+
+.customer-stories-table a:hover {
+  color: var(--color-primary);
+}
+
+.customer-stories-table span {
+  font-size: var(--font-size-100);
+  color: var(--color-grey-900);
 }

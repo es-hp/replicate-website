@@ -35,12 +35,13 @@ body {
   --color-primary-subtle: #f0f6fd;
   --color-gray-300: #dfdcd9;
   --color-gray-400: #a39e98;
+  --color-gray-500: #78736f;
   --color-gray-600: #615d59;
   --color-gray-800: #31302e;
   --color-grey-900: #191918;
-  --color-border: #0000001a;
   --color-alpha-black-200: #0000001a;
   --color-alpha-black-400: #0000004d;
+  --color-border: var(--color-alpha-black-200);
 }
 
 h1,
@@ -322,6 +323,18 @@ h3,
 /* Main */
 main {
   padding: 0 round(up, 7.22223%, 0.2rem);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  outline: none;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  width: 100%;
+  border-top: 1px solid var(--color-gray-500);
 }
 
 /* Footer */

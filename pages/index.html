@@ -759,26 +759,248 @@
             </div>
           </section>
         </div>
-        <div>
-          <section
-            id="home-quote"
-            class="container-fluid d-flex flex-column gap-2 align-items-center justify-content-center text-center"
-            style="padding: 4rem"
+
+        <!--Customer Quote-->
+        <section
+          id="home-quote"
+          class="container-fluid d-flex flex-column gap-2 align-items-center justify-content-center text-center"
+          style="padding: 4rem"
+        >
+          <figure>
+            <blockquote>
+              <p>Your AI everything app.</p>
+            </blockquote>
+            <figcaption>
+              <img
+                src="../assets/home/forbes-logo.png"
+                alt="forbes"
+                style="width: 80px"
+              />
+            </figcaption>
+          </figure>
+        </section>
+        <section id="customer-stories" class="mb-5">
+          <div class="mb-2 d-flex align-items-center gap-2">
+            <div
+              class="p-1 rounded-1 d-inline-flex justify-content-center align-items-center"
+              style="width: 32px; height: 32px; background-color: #f6f5f4"
+            >
+              <i
+                class="bi bi-chat-quote-fill text-dark"
+                style="font-size: 20px"
+              ></i>
+            </div>
+            <span class="fw-medium" style="font-size: 14px"
+              >Customer stories</span
+            >
+          </div>
+          <div
+            class="rounded-3 w-100 p-4 p-lg-5"
+            style="background-color: #f6f5f4"
           >
-            <figure>
-              <blockquote>
-                <p class="">"Your AI everything app."</p>
-              </blockquote>
-              <figcaption>
+            <div
+              class="d-flex flex-column flex-lg-row justify-content-between gap-2 gap-lg-5"
+              style="padding-bottom: 34px !important"
+            >
+              <article class="">
+                <figure class="d-flex flex-column gap-4">
+                  <img
+                    src="../assets/home/OpenAI-black-wordmark-cropped.avif"
+                    width="1129"
+                    height="307"
+                    class="me-auto"
+                    style="height: 28px; width: auto"
+                  />
+                  <blockquote
+                    class="d-flex align-items-center p-0 m-0 font-serif"
+                    style="text-indent: -0.5em; font-size: 1.375rem"
+                  >
+                    <p style="max-width: 50ch">
+                      There's a power in a single platform where you can do all
+                      your work. Notion is that single place.
+                    </p>
+                  </blockquote>
+                  <figcaption style="color: #78736f">
+                    <a href=""
+                      >Read the full story<i class="bi bi-arrow-right ms-1"></i
+                    ></a>
+                  </figcaption>
+                </figure>
+              </article>
+              <div type="button" class="w-100" id="socialProof-container">
                 <img
-                  src="../assets/home/forbes-logo.png"
-                  alt="forbes"
-                  style="width: 80px"
+                  src="https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F28Oz1efdtQCyLG1ocTdmHK%2F0b574e8bdb1c0d5d8b41e80fdb221595%2FHomepage_25_Thumbnail.jpg&w=640&q=75"
+                  alt="Homepage | Social Proof | OpenAI Video Poster"
+                  class="rounded-3"
+                  style="aspect-ratio: 285 / 179; width: 100%"
+                  id="socialProof-video"
                 />
-              </figcaption>
-            </figure>
-          </section>
-        </div>
+                <span
+                  ><i
+                    class="bi bi-play-circle-fill text-white position-absolute"
+                    style="font-size: 40px; bottom: 8px; right: 16px"
+                  ></i
+                ></span>
+              </div>
+            </div>
+            <div>
+              <hr class="divider" />
+            </div>
+            <div class="d-flex d-lg-none flex-column gap-4 my-4">
+              <a class="d-flex flex-column" href="">
+                <img
+                  src="../assets/home/customer-logos/toyota.avif"
+                  class="customer-stories-logo"
+                />
+                <span
+                  >Streamlined workflows to reduce timelines by 3x.<i
+                    class="bi bi-arrow-right d-inline ms-1"
+                  ></i
+                ></span>
+              </a>
+              <a class="d-flex flex-column" href="">
+                <img
+                  src="../assets/home/customer-logos/ramp.avif"
+                  class="customer-stories-logo"
+                />
+                <span
+                  >“With Notion, every person at Ramp has an AI assistant.”<i
+                    class="bi bi-arrow-right d-inline ms-1"
+                  ></i
+                ></span>
+              </a>
+              <a class="d-flex flex-column" href="">
+                <img
+                  src="../assets/home/customer-logos/vercel-logotype-light.svg"
+                  class="customer-stories-logo p-1"
+                />
+                <span
+                  >“Notion understands that you can solve a lot of problems with
+                  one tool.”<i class="bi bi-arrow-right d-inline ms-1"></i
+                ></span>
+              </a>
+            </div>
+            <table
+              id=""
+              class="d-none d-lg-block mt-4 mb-lg-4 customer-stories-table"
+            >
+              <colgroup>
+                <col style="width: 33.33%" />
+                <col style="width: 33.33%" />
+                <col style="width: 33.33%" />
+              </colgroup>
+              <tr>
+                <td>
+                  <div style="margin-right: 24px">
+                    <a class="d-flex flex-column" href="">
+                      <img
+                        src="../assets/home/customer-logos/toyota.avif"
+                        class="customer-stories-logo"
+                      />
+                      <span
+                        >Streamlined workflows to reduce timelines by 3x.<i
+                          class="bi bi-arrow-right d-inline ms-1"
+                        ></i
+                      ></span>
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div style="margin: 0 24px">
+                    <a class="d-flex flex-column" href="">
+                      <img
+                        src="../assets/home/customer-logos/ramp.avif"
+                        class="customer-stories-logo"
+                      />
+                      <span
+                        >“With Notion, every person at Ramp has an AI
+                        assistant.”<i
+                          class="bi bi-arrow-right d-inline ms-1"
+                        ></i
+                      ></span>
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div style="margin-left: 24px">
+                    <a class="d-flex flex-column" href="">
+                      <img
+                        src="../assets/home/customer-logos/vercel-logotype-light.svg"
+                        class="customer-stories-logo p-1"
+                      />
+                      <span
+                        >“Notion understands that you can solve a lot of
+                        problems with one tool.”<i
+                          class="bi bi-arrow-right d-inline ms-1"
+                        ></i
+                      ></span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="d-none d-lg-block">
+              <hr class="divider" />
+            </div>
+            <table id="" class="d-none d-lg-block mt-4 customer-stories-table">
+              <colgroup>
+                <col style="width: 33.33%" />
+                <col style="width: 33.33%" />
+                <col style="width: 33.33%" />
+              </colgroup>
+              <tr>
+                <td>
+                  <div style="margin-right: 24px">
+                    <a class="d-flex flex-column" href="">
+                      <img
+                        src="../assets/home/customer-logos/match.avif"
+                        class="customer-stories-logo"
+                      />
+                      <span
+                        >“Notion has been the most powerful and impactful way to
+                        streamline our workflow.”<i
+                          class="bi bi-arrow-right d-inline ms-1"
+                        ></i
+                      ></span>
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div style="margin: 0 24px">
+                    <a class="d-flex flex-column" href="">
+                      <img
+                        src="../assets/home/customer-logos/deel_2025.avif"
+                        class="customer-stories-logo"
+                      />
+                      <span
+                        >“Someone could join Deel and onboard themselves without
+                        ever speaking to anybody.”<i
+                          class="bi bi-arrow-right d-inline ms-1"
+                        ></i
+                      ></span>
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div style="margin-left: 24px">
+                    <a class="d-flex flex-column" href="">
+                      <img
+                        src="../assets/home/customer-logos/Planful_Logo.avif"
+                        class="customer-stories-logo"
+                      />
+                      <span
+                        >From six apps to one: Scaling faster with all teams
+                        running on Notion AI.<i
+                          class="bi bi-arrow-right d-inline ms-1"
+                        ></i
+                      ></span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
       </div>
     </main>
     <!--Footer-->
