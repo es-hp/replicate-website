@@ -31,7 +31,7 @@ Recreation of parts of the Notion homepage, and login page.
 - Tried to fit in the use of the 'table' element to structure customer testimonials.
   - I only used 'table' here to meet assignment requirements. It would have been better to use grid or flexboxes for this content.
 
-### <footer>
+### 'footer'
 - Uses bootstrap classes to create a responsive footer.
 
 ## login.html
